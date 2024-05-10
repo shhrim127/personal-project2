@@ -1,0 +1,91 @@
+html css js문법 학습
+
+HTML
+Hyper Text Markup Language
+웹사이트 뼈대 구성 마크업 언어
+Tag : <> </> <br/>
+뼈대 구성 태그 : 
+<html> 
+	<head>
+	웹사이트의 속성 (metadata)
+		<title>제목</title> 
+	</head>
+	<body>
+	웹사이트의 내용, 웹사이트에서 보이는 컨텐츠
+	</body>
+</html>
+
+CSS
+Cascading Style Sheets
+웹사이트의 레이아웃 ,색상, 글꼴, 등 디자인을 입힘
+
+JavaScript (ECMAScript)
+웹에 생명을 넣어줌, 동적작업
+
+-자료형 data type : 동적타이핑 방식 사용 (var) (let)
+정수 number type : let n1 = 1234;
+문자열 string type : let s1 = "hello";
+boolean type : let b1 = true;
+정의된 상태 null type : let n = null;
+정의되지 않은 상태 (선언만하고 대입x) undefined type : let u1; let u2=undefined;
+배열 array type : let arr = [1,2,3,4]; (문자도 가능, 다양한 자료형 섞을 수 있음) (인덱스 0부터 시작)
+객체 object type : (다양한 자료형 함께 사용 가능)
+ㄴ   let obj4 = { 
+	a : { a1 : 1, a2 : 2}, 
+	b : { b1 : 3, b2 : 4}, 
+	c : { a1 : 5, a2 : 6}, 
+	};
+console.log ( obj4.c.c2 ) ; >>출력결과 6
+
+-연산자
+대입 연산자 : 변수에 대입하기 위한 연산자 (=)
+항상 오른쪽에서 왼쪽 방향으로 흐름이 흘러감
+let a=10;	let b=20;
+-산술연산자 : 나머지(%) 지수연산(**) + 사칙연산자 : 덧셈(+) 뺼셈(-) 곱셈(*) 나눗셈(/)
+let a=1 ; let b=4;
+a+=b ; (a와 b를 더한 값이 a에 저장// a=a+b // a=6)
+a-+b (a에서 b를 뺀 값을 a에 저장 // a=a-b // a=2)
+-증가연산자 : (++) a++, ++a
+-감소연산자 : (--)  a--, --a
+postfix후위 : 증감 전의 값 변환 후 이후에 변수값 증감
+prefix 전위 : 변수의 값을 증감하고 이후에 증감된 값 반환
+let a= 1; let b= a++; let c= 1; let d= ++c; 
+console.log(a,b); >>2,1
+console.log(c,d); >>2,2
+-관계 연산자 : (비교연산자) : <,>,<=,>= , (동등연산자) : ==, != (같지않다)
+일치 연산자 : 자료형까지 같은지 엄격하게 동일한지 체크 ===, !==
+let a = 1; let b ='1'; 
+console.log(a==b); >>true	console.log(a!=b); >>false
+console.log(a===b); >>false	console.log(a!=b); >>true
+이진 논리 연산자 : true 와 false 값만을 가지는 논리형값 비교 &&, ||
+a&&b (AND연산자): a와 b가 모두 true일 경우만 true
+a||b (OR연산자): a 또는 b가 true일 경우에는 true
+-조건부연산자(삼항연산자): 조건에 따라 결과가 둘로 나누어짐
+조건식 ? true일 경우 : false일경우
+let a=true; let b=false;
+console.log(a ? 1 : 2); >>1  a가 (true)일 경우 1
+console.log(b ? 1 : 2); >>1  b가 (true)일 경우 1 b가 (true)가 아닐경우 2
+
+-함수 : 입력(파라미터, 인자)을 받아 정해진 출력
+1 function statement, 2 arrow function expression
+1 function sum(a,b) {
+	return a+b; 
+  }
+console.log(sum(10,20)); //30
+
+2 const multiply = (a,b) => {
+	return a*b; //
+  }
+console.log(multiply(10,20)); //200
+
+
+Script Language
+런타임에 코드가 해석되고 실헹
+
+
+SPA
+Single Page Application
+하나의 페이지만 존재하는 웹
+=html 파일이 하나
+동적으로 body안의 content로 채워넣음
+ex) react  
